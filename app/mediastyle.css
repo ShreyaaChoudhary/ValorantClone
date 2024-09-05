@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 200%;
+    width: 100%;
+}
+
+#main{
+    background-color: #000;
+}
+/*
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(111, 175, 197);
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(56, 130, 154);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(5, 95, 125);
+}
+#page2 img{
+    height:500px;
+    width: 400px;
+    object-fit: cover;
+    object-position: bottom;
+}
+*/
+#loader{
+    height: 100vh;
+    width:100%;
+    background-color: rgb(0,0,0);
+    position:fixed;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index:99; 
+}
+
+#loader h1{
+    font-size: 6.4vw;
+    line-height: 4vw;
+    letter-spacing: -0.4rem;
+    position: relative;
+    z-index: 9;
+    font-family: "freight big pro";
+    text-transform: lowercase;
+    font-weight: 100;
+}
+#loader video{
+    height: 100%;
+    width:100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+#loader #yellow1{
+    height: 100%;
+    width:100%;
+    position: absolute;
+    background-color:#de0611;
+    z-index: 8;
+}
+#loader #yellow2{
+    height: 100%;
+    width:100%;
+    position: absolute;
+    background-color:green;
+    z-index: 7;
+}
+#nav{
+    position: absolute;
+    width:100%;
+    padding:10px 50px;
+   /*background-color: red;*/
+    z-index: 10;
+}
+#nav svg path{
+    fill:#000;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #de0611;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#page1 h1{
+    font-size: 6.4vw;
+    line-height: 4vw;
+    letter-spacing: -0.4rem;
+    font-family: "freight big pro";
+    font-weight: 100;
+    text-transform: lowercase;
+}
+#page1 h1 span{
+    font-size: 8vw;
+    color:white;
+    text-transform: uppercase;
+    font-weight: 150;
+}
+#page2{
+    height: 90vh;
+    width: 100%;
+    background-color: #000;
+}
+.gallery{
+    top:40%;
+    left:40%;
+    position:relative;
+    width:300px;
+    height:200px;
+    transform-style:preserve-3d;
+    animation:rotate 35s linear infinite;
+  }
+  #head{
+    position: relative;
+    top:12%;
+    left:4%;
+  }
+  #head p{
+    font-size: 6.4vw;
+    line-height: 4vw;
+    letter-spacing: -0.09rem;
+    position: relative;
+    font-size: 80px;
+    font-family: "freight big pro";
+    color: #fff;
+    text-transform: lowercase;
+    font-weight: 100;
+}
+  @keyframes rotate{
+    from{
+      transform:perspective(1200px) rotateY(0deg);
+    }
+    
+    to{
+      transform:perspective(1200px) rotateY(360deg);
+    }
+  }
+  
+  .gallery span{
+    position:absolute;
+    width:100%;
+    height:100%;
+    transform-origin:center;
+    transform-style:preserve-3d;
+    transform:rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+  }
+  
+  .gallery span img{
+    position:absolute;
+    width:120%;
+    height:100%;
+    object-fit:cover;
+  }
+  #page3{
+    height: 160vh;
+    width: 100%;
+    background-image:url(./assets/PLACE2.jpg);
+    background-attachment: fixed;
+  }
+  .gl{ 
+    padding-top: 7vh;
+    padding-bottom: 3vh;
+   }
+.wrapper {
+    margin: 20px auto;
+    max-width: 1600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 15rem);
+    place-content: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .card {
+    position: relative;
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 10%);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    filter: drop-shadow(0rem 0.5rem 0.25rem black);
+  }
+  
+  .cover {
+    filter: grayscale(1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-position: center;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    z-index: 100;
+  }
+  
+  .cover:hover {
+    filter: grayscale(0);
+
+    scale: 1.5;
+  }
+  
+ 
+  
+  .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    display: none;
+    background-color: #de0611;
+    color:white;
+    transition: all 0.6s ease;
+    z-index: 200;
+  }
+  
+  .artist {
+    font: normal 700 1.1rem/1.2rem "Roboto";
+    text-transform: uppercase;
+  }
+  
+  .album {
+    font: normal 400 1.1rem/1.2rem "Roboto";
+  }
+  
+  .year {
+    font: italic 500 0.8rem/0.9rem "Roboto";
+  }
+  #footer{
+    height: 100vh;
+    background-color: #121111;
+  }
+  #footer .bar{
+    height: 12vh;
+    background-color: #2e2c2c;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  }
+  #footer .bar .nav{
+    margin-left: 28%;
+    display: flex;
+    flex-direction: row;
+    
+  }
+  #footer .bar .nav li{
+  display:inline-block;
+  justify-content: space-between;
+  margin-left:5%;
+  }
+  #footer .bar .nav a{
+    white-space:nowrap;
+    padding-left: 5px;
+    padding-right: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  background: none;
+  color: #fff;
+  letter-spacing:2px;
+  }
+  #footer .bar .nav li:hover a{
+    color:#fff;
+    background-color: #3d3b3b;
+    border:1px solid #3d3b3b;
+    padding: 9px;
+    border-radius: 5px;
+  }
+  .icons{
+    top:4%;
+    margin-left: 38.5%;
+    position: relative;
+    align-items: center;
+  }
+  #footer .icons .fa {
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 5px;
+    font-size: 18px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30%;
+    color:#F1F1F1;
+    background-color: #2e2b2b;
+  }
+  
+  #footer .icons .fa:hover {
+    opacity: 0.7;
+  }
+  #footer .logologo{
+    margin-top: -1%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 40%;
+  }
+  .logologo .i1 img{
+    width:180px;
+    height:180px;
+  }
+  .logologo .i2 img{
+    width:70px;
+    height:70px;
+  }
+  .cp{
+    margin-top: -3%;
+    color:#aaa3a3;
+    white-space: nowrap;
+    font-size:12px;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+  
+  }
+  .nav2{
+    margin-top: 2%;
+    margin-left: 28%;
+    display: flex;
+    flex-direction: row;
+    
+  }
+   .nav2 li{
+  display:inline-block;
+  justify-content: space-between;
+  margin-left:5%;
+  }
+  .nav2 a{
+    white-space:nowrap;
+    padding-left: 1px;
+    padding-right: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  background: none;
+  color: #fff;
+  letter-spacing:2px;
+  }
+  .nav2 li:hover a{
+    color:#fff;
+    background-color: #3d3b3b;
+    border:1px solid #3d3b3b;
+    padding: 9px;
+    border-radius: 5px;
+  }
+  .last{
+    margin-top:2%;
+    margin-left:42%;
+  }
+  .last img{
+    width:210px;
+    height: 100px;
+  }
+  

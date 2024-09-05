@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(1.5, 1.5);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f1f1f1;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  z-index: 100;
+  height: 10VH;
+  background-color: rgb(0, 0, 0);
+}
+
+header .logo img {
+  margin-left: -50%;
+  max-width: 100px;
+  HEIGHT: 40PX;
+}
+
+header .logo2 img {
+  margin-left: -70px;
+  max-width: 100px;
+}
+
+.navigation {
+  margin-left: -50px;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation li {
+  display: inline-block;
+  justify-content: space-between;
+  margin: 15px 15px;
+}
+
+.navigation li a {
+  white-space: nowrap;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0;
+  margin: 10px 0;
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  background: none;
+  color: #fff;
+  letter-spacing: 2px;
+  justify-content: space-between;
+}
+
+.navigation li:hover a {
+  color: rgb(187, 157, 56);
+  ;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation li:hover a .fa-shopping-cart {
+  color: rgb(187, 157, 56);
+  ;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown {
+  display: none;
+  background-color: #000;
+}
+
+.dropdown li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+li:hover .dropdown a {
+
+  font-size: 7px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0;
+  margin: 10px 0;
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  background: none;
+  color: #c0bcbc;
+  letter-spacing: 2px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+li:hover .dropdown a>span {
+  color: #ddb862;
+  font-size: 8px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+li:hover .dropdown li:hover a {
+  color: rgb(187, 157, 56);
+  align-items: center;
+  justify-content: space-between;
+}
+
+li:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 300px;
+  width: 15%;
+
+}
+
+li a:hover .dropdown {
+  color: #ffffff;
+}
+
+.search {
+  margin-left: -30px;
+  position: relative;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #201f1f;
+  outline: none;
+  border: none;
+  color: #646464;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  width: 12em;
+  transition: all ease-in-out .5s;
+  margin-right: -2rem;
+  box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:hover {
+  box-shadow: 0 0 1em #00000013;
+  outline: none;
+}
+
+.search__input:hover {
+  outline: none;
+  background-color: #282727;
+  color: white;
+
+}
+
+.search__button {
+  background-color: #000000;
+}
+
+.search__button {
+  border: none;
+  background: none;
+  color: #c0bcbc;
+  margin-top: .1em;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+
+.fa-shopping-cart {
+  margin-top: 15px;
+  margin-left: 25px;
+  right: 50px;
+  font-size: 17px;
+  transform: translateY(-50%);
+  padding-right: 10px;
+  color: #fff;
+}
+
+.bg {
+  background-image: url(../assets/merch.jpg);
+  animation: 2s ease-out 0s 1 zoomin;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  margin-top: 50px;
+
+  overflow: hidden;
+}
+
+.data {
+  position: relative;
+  top: 73%;
+  left: 10%;
+}
+
+.data p {
+  animation: 2s ease-out 0s 1 slideInLeft;
+  color: rgb(187, 157, 56);
+  font-stretch: ultra-expanded;
+  font-size: 100px;
+  white-space: nowrap;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  letter-spacing: -0.9rem;
+  margin-top: -30px;
+}
+
+.data>p>span {
+  -webkit-text-stroke: 2px rgb(187, 157, 56);
+  letter-spacing: 0.1rem;
+  color: transparent;
+}
+
+.page1 {
+  margin-top: 10px;
+  height: 15vh;
+  overflow: hidden;
+}
+
+#main {
+  position: relative;
+  overflow: hidden;
+
+}
+
+#page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f1f1f1;
+}
+
+#loop {
+  display: flex;
+  position: absolute;
+  top: 0%;
+  height: 5%;
+  width: 100%;
+  font-size: 65px;
+  white-space: nowrap;
+  font-family: gilroy;
+}
+
+#loop>h1 {
+  color: rgb(187, 157, 56);
+  font-weight: 400;
+  animation-name: anim;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#loop>h1>span {
+  -webkit-text-stroke: 0.7px #544400;
+  color: transparent;
+  font-weight: 300;
+  font-size: 52px;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.page2 {
+  height: 600vh;
+  overflow: hidden;
+}
+
+.container {
+
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.rows {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 4%;
+  padding-bottom: 2%;
+}
+
+.rows .col {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+.product-card {
+  width: 90%;
+  height: 350px;
+  background-color: rgb(217, 217, 170);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 22px;
+}
+
+.product-image {
+  height: 50%;
+  background-color: #0b0028;
+  border-radius: 22px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-name {
+  font-size: 0.73rem;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.product-id {
+  font-size: 0.65rem;
+  color: #515050;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #ff4d4d;
+}
+
+.add-to-cart-btn {
+  background-color: rgb(187, 157, 56);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
