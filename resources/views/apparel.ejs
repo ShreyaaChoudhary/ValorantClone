@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.jpg">    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/STYLE3.CSS">
+
+
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+</head>
+<style>
+    /* Modal */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #1e1d1d;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #141414;
+        width: 20%;
+        /* Could be more or less, depending on screen size */
+        border-radius: 24px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: modalopen;
+        /* Animation to open the modal */
+        animation-duration: 0.4s;
+        height: 130PX;
+    }
+
+    /* Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Modal Content Animation */
+    @keyframes modalopen {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* Button */
+    #goToCart {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        border-radius: 24PX;
+        color: white;
+        padding: 6px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    #modalMessage {
+        COLOR: WHITE;
+        margin-top: 6%;
+        font-size: 19PX;
+        font-family: FREIGHT BIG PRO;
+    }
+
+    #goToCart:hover {
+        background-color: RED;
+        /* Darker green */
+    }
+    .oos img{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    }
+</style>
+
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage">Product added to cart!</p>
+            <button id="goToCart" onclick="goToCart()" type="button">GO TO CART</button>
+        </div>
+    </div>
+    <header>
+
+        <a href="#" class="logo"><img src="/assets/riotlogo.png" width="300px" height="120px"></a>
+        <a href="#" class="logo2"><img src="/assets/valolog.png" width="50px"></a>
+
+        <u1 class="navigation">
+            <li>
+                <a href="featured">featured</a>
+            </li>
+            <li>
+            <li>
+                <a class="active" href="#">apparel&nbsp;<i class="fa fa-caret-down"
+                        style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="apparel"><span>SHOP ALL</span></a></li>
+                    <li><a href="#top">top</a></li>
+                    <li><a href="#bottom">bottoms</a></li>
+                    <li><a href="#hoo">Hoodie&jackets</a></li>
+                </ul>
+            </li>
+            </li>
+            <li>
+            <li>
+                <a href="coll">collectibles&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="coll"><span>SHOP ALL</span></a></li>
+                    <li><a href="coll#fig">Figures</a></li>
+                    <li><a href="coll#sta">statue</a></li>
+                    <li><a href="coll#pin">pin</a></li>
+                </ul>
+            </li>
+            </li>
+            <li>
+            <li>
+                <a href="art">art&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="art#no"><span>SHOP ALL</span></a></li>
+                    <li><a href="art#no">-</a></li>
+                    <li><a href="art#no">-</a></li>
+                    <li><a href="art#no">-</a></li>
+                </ul>
+            </li>
+            </li>
+            <li>
+            <li>
+                <a href="acc">accesories&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="acc"><span>SHOP ALL</span></a></li>
+                    <li><a href="acc#jew">jewellery</a></li>
+                    <li><a href="acc#hat">hats & beanies</a></li>
+                    <li><a href="acc#mug">Mugs</a></li>
+                </ul>
+            </li>
+            </li>
+            <li><a href="sale">Sales</a></li>
+            <li><a href="cart" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+        </u1>
+        <div class="search">
+            <input type="text" class="search__input" placeholder="Search">
+            <button class="search__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+    <section class="aa">
+        <p><a href="featured">Home&nbsp;</a><span>/</span>&nbsp;Apparel</p>
+    </section>
+    <section class="bg">
+        <div class="data">
+            <p>Apparel</p>
+        </div>
+        <div class="jee"><img src="/assets/white.png" alt=""></div>
+    </section>
+    <section class="page1">
+    </section>
+    <section class="page2">
+        <div class="maincont">
+            <div class="mainrow">
+                <div class="maincol">
+                    <div class="subcol">
+                        <p>CATEGORY</p>
+                        <div class="subrow">
+                            <a href="#top">top</a>
+                            <a href="#bottom">bottoms</a>
+                            <a href="#hoo">hoddies & jackets</a>
+                            <a href="#hat3">jewellery</a>
+                            <a href="#hat3">loungewear</a>
+                            <a href="#hat">beanies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="maincol">
+                    <div class="cont">
+                        <div class="row" id="hoo" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 5; i < 6; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">limited edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blte667fdf456556906/63ea813d45406c110ebcc7af/Ahri-Cardigan_Front_Shot_Thumb_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Hoodies & jackets</span>
+                                        <h4><a href="">Spirit Blossom Ahri Traditional Top</a></h4>
+                                        <p> S,SX,M,L,XXL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$94.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">Out of Stock</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt2fc02a48fdf414fd/65136f79c9f9dc0c657bab14/Worlds_2023_Women_s_Zip_Fleece_Ecomm_Image_1.png"
+                                            alt=""  style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Hoodies & jackets</span>
+                                        <h4><a href="">Worlds 2023 Womens Zip Fleece</a></h4>
+                                        <p>-NO SIZE AVL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price" style="color:grey"><small>$99.00</small>$74.99</div>
+                                            <div class="product-links">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">Out of Stock</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltc24f2d79d8c8e283/62a7a34443918857196ed8fc/2022_Promo_WR-Icons_Ecomm_Hoodie_image01.png"
+                                            alt=""  style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Hoodies & jackets</span>
+                                        <h4><a href="">Wild Rift Icons Hoodie Tan (Unisex)</a></h4>
+                                        <p>-NO SIZE AVL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price" style="color:grey"><small>$80.00</small>$75.00</div>
+                                            <div class="product-links">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row" id="hoo" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 5; i < 6; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge1">retired</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltf2059a91f69bdca3/65137c07b258107a5b80404b/Worlds2023_VarsityJacket_EComm_1.png"
+                                            alt=""  style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Hoodies & jackets</span>
+                                        <h4><a href="">Worlds 2023 Varsity Jacket</a></h4>
+                                        <p>-RETIRED</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price" style="color:grey"><small>$190.00</small>$179.00</div>
+                                            <div class="product-links">
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 9; i < 10; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+                               
+                                <div class="product-card">
+                                    <div class="badge">hot</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt0a2fc386f843aeab/6567ad16efd9ef5d43b82ffe/Holiday-2023_Poro-Sweater_Ecomm-Image_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Hoodies & jackets</span>
+                                        <h4><a href="">Poro Holiday Sweater</a></h4>
+                                        <p>M L XL XXL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price"><small>$70.00</small>$64.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge1">Be back soon</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt38261a66478aaeaf/6042b3583c41f30bce483247/PHNX_CREWNECK_WV2_MAIN.png"
+                                            alt=""  style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Hoodies & jackets</span>
+                                        <h4><a href="">VALORANT Phoenix Duelist Crewneck (Unisex)</a></h4>
+                                        <p>COMING BACK SOON</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price" style="color:grey"><small>$35.00</small>$60.00</div>
+                                            <div class="product-links">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row" id="top" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 11; i < 12; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">limited edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt2c5a685eead11199/644199a910882b4f2385bcde/MSI2023_AllOdds-Tee_Back_Shot_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Tops</span>
+                                        <h4><a href="">MSI 2023 ALL ODDS Tee</a></h4>
+                                        <p> S,SX,M,L,XXL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price"><small>$37.00</small>$33.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge1">Limited Edition<br>Out of stock</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt8886fe736e9e426e/65e770e07ca2201d9b1e4b78/VALORANT_VCT_Evergreen_Masters_Short_Sleeve_Tee_(Unisex)_Ecomm_Image_1.png"
+                                            alt="" style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Tops</span>
+                                        <h4><a href="">VALORANT Masters Madrid 24 // Initiated Tee</a></h4>
+                                        <p>-NO SIZE AVL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price" style="color:grey"><small>$49.00</small>$34.99</div>
+                                            <div class="product-links">
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 13; i < 14; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">Limited Edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt90673ed7590bcb57/65137ba28f0457bd5912a6b5/Worlds2023_BaseballJersey_EComm_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Tops</span>
+                                        <h4><a href="">Worlds 2023 Baseball Jersey</a></h4>
+                                        <p>-NO SIZE AVL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price"><small>$80.00</small>$75.00</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <% } %>
+                        <% } else { %>
+                            <!-- Handle case where items array is empty or undefined -->
+                            <p>No items found</p>
+                        <% } %>
+                        <div class="row" id="top" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 14; i < 15; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">limited edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt0f05bd8b65b05263/65e7712b03e46036c1dc2688/VALORANT_VCT_Evergreen_Masters_Long_Sleeve_Tee_(Unisex)_Ecomm_Image_2.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Tops</span>
+                                        <h4><a href="">VALORANT Masters Madrid 24 // Killjoy Longsleeve</a></h4>
+                                        <p>M,L,XXL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price"><small>$44.00</small>$34.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge1">Out of stock</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt29f71abe7c882413/6308e6e12d08277c7e7326d6/2022_Promo_TK-Tee_Ecomm_image02.png"
+                                            alt=""  style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Tops</span>
+                                        <h4><a href="">Master Chef Tahm Kench Tee</a></h4>
+                                        <p>-NO SIZE AVL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price" style="color:grey"><small>$33.00</small>$30.99</div>
+                                            <div class="product-links">
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i =16; i < 17; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">Limited Edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltde099c34525db242/6308e7671ee78a063c596bd3/2022_Promo_Luc-Tee_Ecomm_image02.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Tops</span>
+                                        <h4><a href="">Sentinel of Light Lucian Tee</a></h4>
+                                        <p>-NO SIZE AVL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$30.00</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <% } %>
+                        <% } else { %>
+                            <!-- Handle case where items array is empty or undefined -->
+                            <p>No items found</p>
+                        <% } %>
+                        <div class="row" id="bottom" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 17; i < 18; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="badge">limited edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt333e18667f6304e1/65137a734d72e9c23584bfbb/Worlds2023_Jogger_EComm_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Bottoms</span>
+                                        <h4><a href="">Worlds 2023 Jogger</a></h4>
+                                        <p> S,SX,M,L,XXL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$64.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 18; i < 19; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt676c34e8f2645a92/61ef2ea9ac70415152965d6a/2022_ValW3_Ecomm_Joggers_image_01.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Bottoms</span>
+                                        <h4><a href="">VALORANT Shatterprint Joggers</a></h4>
+                                        <p>-NO SIZE AVL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$75.00</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 19; i < 20; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt57f9d236c9592676/62b23f7d1da22658512987e4/2022_Promo_VAL-WV3-5_Ecomm_Shorts_image01.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Bottoms</span>
+                                        <h4><a href="">Valorant Baseball Shorts</a></h4>
+                                        <p>-NO SIZE AVL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$50.00</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <% } %>
+                        <% } else { %>
+                            <!-- Handle case where items array is empty or undefined -->
+                            <p>No items found</p>
+                        <% } %>
+                        
+                        <div class="row" id="hat" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 31; i < 32; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">limited edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltc4c304fec10561f8/62fe695bb4be734daff7fe3a/2022_Promo_VCT-Champs_Ecomm_Hat_thumbnail_image01.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Hats</span>
+                                        <h4><a href="">Champions 2022 "FEAR/NONE" Dad Hat</a></h4>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$30.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 32; i < 33; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">Limited Edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt843de563e303cb53/6441965e46640e0796ad25ba/MSI2023_Defy-Hat_Front_Shot_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Hats</span>
+                                        <h4><a href="">MSI 2023 DEFY Hat</a></h4>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$29.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge1">Out of Stock</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt281e57c2fead98c3/65429bd2c2b34d001be74632/Ecomm-Image-ecomm_image_01.png"
+                                            alt=""  style="-webkit-filter: grayscale(100%); filter: grayscale(100%);">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Tops</span>
+                                        <h4><a href="">HEARSTEEL Sett Beanie</a></h4>
+                                        <p>-NOT AVL</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price" style="color:grey">$29.99</div>
+                                            <div class="product-links">
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row" id="hat" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 34; i < 35; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">limited edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt1c50c3c1451d7473/64c2e31ae930604a587f0ec4/Ecomm-Image-Promo-One_More_Hat_ecomm_image_01.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Hats</span>
+                                        <h4><a href="">VALORANT Champions 2023 One More Hat</a></h4>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$29.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 35; i < 36; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltc1905ab8b0fe5a20/65136b4ca9968b2b0536a452/Worlds_2023_Ahri_Hood_Ecomm_Image_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Tops</span>
+                                        <h4><a href="">Ahri Travelers Hood</a></h4>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$54.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <!-- Handle case where items array is empty or undefined -->
+                                <p>No items found</p>
+                            <% } %>
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 36; i < 37; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">Limited Edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltdb602a2848dad07d/644195f45515507b911c6dd3/MSI2023_Beanie_Front_Shot_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Tops</span>
+                                        <h4><a href="">MSI 2023 DEFY Beanie</a></h4>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$29.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <% } %>
+                        <% } else { %>
+                            <!-- Handle case where items array is empty or undefined -->
+                            <p>No items found</p>
+                        <% } %>
+                        <div class="row" id="hat3" data-aos="fade-up" data-aos-duration="1000">
+                           
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge3">Made to order</div>
+                                    <div class="product-tumb">
+                                        <img src="/assets/cap.png" alt="" class="oos">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Hats</span>
+                                        <h4><a href="">VALORANT Logo Snapback Hat</a></h4>
+                                        <p style="color:red;">This product is a made-to-order product.</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price" style="color:red; font-size: 10px;">USER NOT APPLICABLE FOR THIS PRODUCT</div>
+                                            <div class="product-links">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="row" id="no" data-aos="fade-up" data-aos-duration="2000">
+                            <p>NO MORE TO LOAD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="bar">
+            <div class="nav">
+                <li>
+                    <a href="#" class="bar1">DOWNLOAD GAME CLIENT</a>
+                </li>
+                <li><a href="#" class="bar2">DOWNLOAD RIOT MOBILE COMPANION APP</a>
+                </li>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </div>
+        <div class="logologo">
+            <div class="i1"><img src="/assets/riotlogosmall-removebg-preview.png"></div>
+            <div class="i2"><img src="/assets/val-logo-small.png" class="i2"></div>
+        </div>
+        <div class="cp">
+            <center>
+                <p2>&#169; RIOT GAMES, INC. RIOT GAMES, VALORANT AND ANY ASSOCIATED LOGOS ARE TRADEMARKS,<BR>SERVICE
+                    MARKS,
+                    AND/OR REGISTERED TRADEMARKS OF RIOT, INC.</p2>
+            </center>
+        </div>
+        <div class="nav2">
+            <li>
+                <a href="#" class="ba1">PRIVACY NOTICE</a>
+            </li>
+            <li><a href="#" class="ba2">TERMS OF SERVICE</a>
+            </li>
+            <li><a href="#" class="ba3">COOKIE PREFERENCES</a>
+            </li>
+        </div>
+        <div class="last">
+            <img src="/assets/blood-langages.png">
+        </div>
+    </section>
+    <script src="/cartjs.js"></script>
+    <script>
+        AOS.init({
+            duration: 1700,
+        })
+
+    </script>
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+        integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,473 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.jpg">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/cartstyle.CSS">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+</head>
+<style>
+    /* Modal */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #1e1d1d;
+        margin: 14% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #141414;
+        width: 50%;
+        /* Could be more or less, depending on screen size */
+        border-radius: 24px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: modalopen;
+        /* Animation to open the modal */
+        animation-duration: 0.4s;
+        height: 340PX;
+    }
+
+    /* Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Modal Content Animation */
+    @keyframes modalopen {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* Button */
+    #goToHome {
+        background-color: #737973;
+        /* Green */
+        border: none;
+        border-radius: 24PX;
+        color: white;
+        padding: 6px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin-top: 10px;
+        cursor: pointer;
+        margin-left: 40%;
+        margin-top: 2%;
+    }
+
+    #modalMessage {
+        COLOR: WHITE;
+        margin-top: 3%;
+        font-size: 35PX;
+        margin-left: 31%;
+        font-family: FREIGHT BIG PRO;
+    }
+
+    #goToHome:hover {
+        background-color: RED;
+        /* Darker green */
+    }
+    form p4{
+        font-size: 25px;
+        z-index: 4;
+        color: white;
+        font-family: freight big pro;
+    }
+    p3{
+        display: inline;
+    }
+    p3 select{
+        width: 4%;
+        border-radius: 34;
+        background:none;
+        color:white;
+    }
+    p3 option{
+        
+        background: black;
+        color:white;
+        border: none;
+    }
+    p3 option:hover{
+        background: red;
+    }
+    p3 input{
+        width: 70%;
+
+    }
+    p5 input{
+        width: 76%;
+    }
+</style>
+
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage">ADD INFO NOW!</p>
+            <form>
+                <p4 style="font-size: 30px;">TELEPHONE</p4><br>
+                <P3><select>
+                    <option class="text">+91</option>
+                    <option class="text">+95</option>
+                    <option class="text">+111</option>
+                    <option class="text">+105</option>
+                </select><input type="tel" id="tel" placeholder="123-4567-890"></P3><br>
+                <p4 style="font-size: 30px;">ADDRESS</p4><br>
+                <p5><input id="text" placeholder="A-XXX"></p5>
+            </form>
+            <a href="order"><button id="goToHome" onclick="goToHome()" type="button">CHECKOUT</button></a>
+            
+        </div>
+    </div>
+    <header>
+
+        <a href="#" class="logo"><img src="/assets/riotlogo.png" width="300px" height="120px"></a>
+        <a href="#" class="logo2"><img src="/assets/valolog.png" width="50px"></a>
+
+        <u1 class="navigation">
+            <li>
+                <a href="featured">featured</a>
+            </li>
+            <li>
+            <li>
+                <a href="apparel">apparel&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="apparel"><span>SHOP ALL</span></a></li>
+                    <li><a href="apparel#top">top</a></li>
+                    <li><a href="apparel#bottom">bottoms</a></li>
+                    <li><a href="apparel#hoo">Hoodie&jackets</a></li>
+                </ul>
+            </li>
+            </li>
+            <li>
+            <li>
+                <a href="coll">collectibles&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="coll"><span>SHOP ALL</span></a></li>
+                    <li><a href="coll#fig">Figures</a></li>
+                    <li><a href="coll#sta">statue</a></li>
+                    <li><a href="coll#pin">pin</a></li>
+                </ul>
+            </li>
+            </li>
+            <li>
+            <li>
+                <a href="art">art&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="art#no"><span>SHOP ALL</span></a></li>
+                    <li><a href="art#no">-</a></li>
+                    <li><a href="art#no">-</a></li>
+                    <li><a href="art#no">-</a></li>
+                </ul>
+            </li>
+            </li>
+            <li>
+            <li>
+                <a href="acc">accesories&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="acc"><span>SHOP ALL</span></a></li>
+                    <li><a href="acc#jew">jewellery</a></li>
+                    <li><a href="acc#hat">hats & beanies</a></li>
+                    <li><a href="acc#mug">Mugs</a></li>
+                </ul>
+            </li>
+            </li>
+            <li><a href="sale">Sales</a></li>
+            <li><a class="active" href="cart" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </li>
+        </u1>
+        <div class="search">
+            <input type="text" class="search__input" placeholder="Search">
+            <button class="search__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+    <section class="aa">
+        <p><a href="featured">Home&nbsp;</a><span>/</span>&nbsp;Cart</p>
+    </section>
+    <section class="mainpage">
+        <div class="num">
+            <div>
+                <% if(session.cart) {%>
+                <p>CART {<span class="real"
+                        style="font-family: freight big pro; font-size: 70px; padding: 1vh;"><%= session.cart.totalQty %></span>}</p>
+                        <% } %>
+            </div>
+            <div class="maincont" STYLE="position: absolute;">
+
+                <div class="row">
+                    <div class="col" STYLE="position: relative; width: 60%;">
+                        <div class="title"
+                            style="display: flex;flex-direction: row; border-bottom: 1px solid black; padding-bottom: 2vh;">
+                            <p style="font-size: 40px">Shopping Cart</p>
+                            <a href="order"><button id="orderHistoryBtn" onclick="order">Your Orders</button></a>
+                            
+                        </div>
+                        <div class="all">
+                            <div class="inner" style="padding-top:5vh; display: flex; flex-direction: column; flex: 1; font-family: freight big pro;">
+                                <% if (cartItems && Object.keys(cartItems).length > 0) { %>
+                                    <% for (const itemId in cartItems) { %>
+                                        <% const item = cartItems[itemId]; %>
+                                        <div class="fin">
+                                            <p class="name"><%= item.item.name %>
+                                                <span class="qty" ><span style="font-family: freight big pro;font-weight: 100;">QTY:</span><%= item.qty %></span>
+                                                <br>
+                                            <span class="price" >$ <%= item.item.price %></p>
+                                            
+                                        </div>
+                                    <% } %>
+                                <% } else { %>
+                                    <p>No items in the cart</p>
+                                <% } %>
+                            </div>
+                            
+                        </div>
+                        <div class="back-to-shop" STYLE="position: absolute; "><a href="featured">&leftarrow;</a><span
+                                class="text-muted">Back
+                                to shop</span></div>
+                    </div>
+                    <div class="col" STYLE="position: relative;padding-bottom: 2vh;">
+                        <p style="font-size: 70px;">Summary</p>
+                        <div class="items" style="padding-bottom: 2vh;">
+                            <% if (session.cart) { %>
+                            <div class="col2"  id="totalItems" style="float: left; padding-top: 0.5vh;">ITEMS <%= session.cart.totalQty %></div>
+                            <div class="col2" style="float:right;"></div>
+                            <button onclick="clearCart()" class="clearbtn">CLEAR ALL</button>
+                            <% } %>
+                               
+                        </div>
+                        <div class="charges" style="border-top: 1px solid black; padding: 1vh 0;">
+                            <form>
+                                <p style="font-size: 30px;">SHIPPING</p>
+                                <select>
+                                    <option class="text">Standard-Delivery -&nbsp;&nbsp;$5.00</option>
+                                </select>
+                                <p style="font-size: 30px;">GIVE CODE</p>
+                                <input id="code" placeholder="Enter your code">
+                            </form>
+                        </div>
+                        <div class="check" style="border-top: 1px solid black; padding: 2vh 0;">
+                            <% if (session.cart) { %>
+                                <div class="col">TOTAL PRICE: $<%= (parseFloat(session.cart.totalPrice)+5.00).toFixed(2) %></div>
+                            <% } %>
+                            <div class="col text-right"></div>
+                        </div>
+                        <button class="btn">CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="bar">
+            <div class="nav">
+                <li>
+                    <a href="#" class="bar1">DOWNLOAD GAME CLIENT</a>
+                </li>
+                <li><a href="#" class="bar2">DOWNLOAD RIOT MOBILE COMPANION APP</a>
+                </li>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </div>
+        <div class="logologo">
+            <div class="i1"><img src="/assets/riotlogosmall-removebg-preview.png"></div>
+            <div class="i2"><img src="/assets/val-logo-small.png" class="i2"></div>
+        </div>
+        <div class="cp">
+            <center>
+                <p2>&#169; RIOT GAMES, INC. RIOT GAMES, VALORANT AND ANY ASSOCIATED LOGOS ARE TRADEMARKS,<BR>SERVICE
+                    MARKS,
+                    AND/OR REGISTERED TRADEMARKS OF RIOT, INC.</p2>
+            </center>
+        </div>
+        <div class="nav2">
+            <li>
+                <a href="#" class="ba1">PRIVACY NOTICE</a>
+            </li>
+            <li><a href="#" class="ba2">TERMS OF SERVICE</a>
+            </li>
+            <li><a href="#" class="ba3">COOKIE PREFERENCES</a>
+            </li>
+        </div>
+        <div class="last">
+            <img src="/assets/blood-langages.png">
+        </div>
+    </section>
+    <script src="/resources/js/app.js"></script>
+    </script>
+    <script>
+        function clearCart() {
+            // Send a request to clear the cart items
+            fetch('/clearCart', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({})
+            })
+            .then(response => {
+                if (response.ok) {
+                    // If the request is successful, reload the page
+                    window.location.reload();
+                } else {
+                    // Handle errors
+                    console.error('Failed to clear cart');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+    
+    <!--<script>
+        // Retrieve cart items from local storage
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Function to display cart items
+        function displayCartItems() {
+            let innerDiv = document.querySelector('.inner');
+            let totalPrice = 0;
+            let totalItems = cartItems.length;
+            innerDiv.innerHTML = '';
+
+            cartItems.forEach((item, index) => {
+                let itemElement = document.createElement('div');
+                itemElement.classList.add('item');
+                totalPrice += parseFloat(item.price) + 5.00;
+
+                itemElement.innerHTML = `
+                    <div class="item-details">
+                        <div class="item-name">${item.name}</div>
+                        <div class="item-price">$${item.price}</div>
+                        <button class="cross" onclick="removeItem(${index})">X</button> <!-- Button to remove the item 
+                    </div>
+                `;
+                innerDiv.appendChild(itemElement);
+                // Add a line between items
+                let line = document.createElement('hr');
+                innerDiv.appendChild(line);
+            });
+            // Display total price
+            let totalPriceElement = document.querySelector('.check .col.text-right');
+            totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+
+            // Display total number of items
+            let totalItemsElement = document.querySelector('.items .col2:first-child');
+            totalItemsElement.textContent = `ITEMS ${totalItems}`;
+
+            let real = document.querySelector('.real');
+            real.textContent = totalItems;
+        }
+        // Display cart items when the page loads
+        window.onload = displayCartItems;
+
+        // Function to remove an item from the cart
+        function removeItem(index) {
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            displayCartItems();
+        }
+
+        // Function to clear all items from the cart
+        function clearCart() {
+            cartItems = [];
+            localStorage.removeItem('cartItems');
+            displayCartItems();
+        }
+    </script>-->
+    <script>
+        document.querySelector('.btn').addEventListener('click', function () {
+            // Display the modal
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        });
+
+        // Function to close the modal when clicking on the close button
+        document.querySelector('.close').addEventListener('click', function () {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        });
+
+        // Function to close the modal when clicking anywhere outside of it
+        window.addEventListener('click', function (event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // Function to handle going back to the home screen
+        function goToHome() {
+            window.location.href = "ordercheck"; // Change "home" to the actual URL of your home screen
+        }
+    </script>
+    <script>
+        AOS.init({
+            duration: 1700,
+        })
+
+    </script>
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+        integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>

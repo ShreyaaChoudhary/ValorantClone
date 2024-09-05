@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALORANT</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.jpg">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/STYLE.CSS">
+  <link rel="stylesheet" href="styleform.css">
+  
+</head>
+<STYLE>
+  .modal {
+    backdrop-filter: blur(5px);
+    display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 9;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 1;
+
+    /* Black w/ opacity */
+
+    /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: rgb(5, 5, 6);
+    margin: 13% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+
+    width: 60%;
+    /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: modalopen;
+    /* Animation to open the modal */
+    animation-duration: 0.4s;
+    height: 260PX;
+  }
+
+  /* Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Modal Content Animation */
+  @keyframes modalopen {
+    from {
+      opacity: 0
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  #modalMessage {
+    COLOR: WHITE;
+    margin-top: 4%;
+    font-size: 35PX;
+    font-weight: bold;
+    margin-left: 30%;
+    font-family: FREIGHT BIG PRO;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    margin-top: 4%;
+  }
+
+  .col p {
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    color: white;
+    padding-bottom: 2vh;
+  }
+</STYLE>
+<STYLE>
+  #goToCart {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .15s ease;
+    width: 70%;
+    margin-left: 10%;
+  }
+
+  #goToCart::before,
+  #goToCart::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7D8082;
+    transition: all .15s ease;
+  }
+
+  #goToCart::before {
+    top: 0;
+    border-bottom-width: 0;
+  }
+
+  #goToCart::after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+
+  #goToCart:active,
+  #goToCart:focus {
+    outline: none;
+  }
+
+  #goToCart:active::before,
+  #goToCart:active::after {
+    right: 3px;
+    left: 3px;
+  }
+
+  #goToCart:active::before {
+    top: 3px;
+  }
+
+  #goToCart:active::after {
+    bottom: 3px;
+  }
+
+  .goto_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0f1923;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+
+  .goto_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #0f1923;
+  }
+
+  .goto_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all .2s ease;
+  }
+
+  .goto_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #0f1923;
+    transform: skew(-15deg);
+    transition: all .2s ease;
+  }
+
+  .goto_text {
+    position: relative;
+  }
+
+  #goToCart:hover {
+    color: white;
+  }
+
+  #goToCart:hover .goto_sl {
+    width: calc(100% + 15px);
+  }
+
+  #goToCart:hover .goto_lg::after {
+    background-color: #fff;
+  }
+</STYLE>
+<body>
+  <script>
+    AOS.init({
+      duration: 1700,
+    })
+  </script>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalMessage">\&nbsp;&nbsp;GET SET UP TO PLAY&nbsp;&nbsp;\</p>
+      <div class="row">
+        <div class="col">
+          <p>I don't have a Riot account yet</p>
+          <a href="login">
+          <button id="goToCart" onclick="goToCart()">
+            <span class="goto_lg" style="background-color:#ff4655;">
+              <span class="goto_sl"></span>
+              <span class="goto_text">MAKE ONE</span>
+            </span>
+          </button>
+        </a>
+        </div>
+        <div class="col">
+          <p>I have a Riot account</p>
+          <a href="login">
+          <button id="goToCart" onclick="goToCart()">
+            <span class="goto_lg" style="background-color: #ff4655;">
+              <span class="goto_sl"></span>
+              <span class="goto_text">SIGN IN</span>
+            </span>
+          </button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <audio autoplay>
+      <source src="/assets/bg.mp3" type="audio/mpeg" id="audi">
+    </audio>
+
+    <a href="#" class="logo"><img src="/assets/riotlogo.png" width="300px" height="120px"></a>
+    <a href="#" class="logo2"><img src="/assets/valolog.png" width="50px"></a>
+
+    <u1 class="navigation">
+      <li>
+      <li>
+        <a href="#">GameInfo&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+        <ul class="dropdown">
+          <li><a href="#new">news</a></li>
+          <li><a href="#agents">agents</a></li>
+          <li><a href="#maps">maps</a></li>
+          <li><a href="#setup">setup</a></li>
+        </ul>
+      </li>
+      </li>
+      <li><a href="media">media</a></li>
+      <li><a href="news">news</a></li>
+      <li><a href="#">OurSocials&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+        <ul class="dropdown">
+          <li><a href="https://www.instagram.com/valorant/?hl=en">&nbsp;instagram</a></li>
+          <li><a href="https://discord.com/invite/valorant">&nbsp;discord</a></li>
+          <li><a href="https://www.youtube.com/@valorant">&nbsp;youtube</a></li>
+        </ul>
+      </li>
+      <li><a href="featured">merch</a></li>
+      <li><a href="indexchat">connect</a></li>
+  
+      <% if (username) { %>
+        <p style="white-space:nowrap; font-size: 12px; text-transform: uppercase; text-decoration: none;font-weight: 600;color: #ff4655;letter-spacing: 2px;">Welcome <%= username %></p>
+        <!-- Other content for logged-in users -->
+    <% } else { %>
+      <li ><a href="login">login/signup</a></li>
+      
+        <% } %>
+        <li>    <a href="/logout">Logout</a></li>
+    </u1>
+    <div class="search">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+  </header>
+  <SECTION>
+    <video autoplay muted loop id="myVideo">
+      <source src="/assets/trailervideo.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+
+      <p>a 5v5 character-based tactical shooter</p>
+      <img src="/assets/title2-removebg-preview.png" width="600px" height="300px">
+      <a href="#" onclick="info()" class="valorant-btn"><span class="underlay"><span
+            class="label">PLAYFREE!</span></span></a>
+    </div>
+  </SECTION>
+  <section class="loop">
+    <div id="main">
+      <div id="page">
+        <div id="loop">
+          <h1><b> A</b>5V5 <b><i>CHARACTER</i></b><i> BASED</i></b> <span>TACTICAL</span><span><i> SHOOTER
+              </i></span><I>GAME. </I></h1>
+          <h1><b> A</b>5V5 <b><i>CHARACTER</i></b><i> BASED</i></b> <span>TACTICAL</span><span><i> SHOOTER
+              </i></span><I>GAME. </I></h1>
+          <h1><b> A</b>5V5 <b><i>CHARACTER</i></b><i> BASED</i></b> <span>TACTICAL</span><span><i> SHOOTER
+              </i></span><I>GAME. </I></h1>
+
+        </div>
+      </div>
+    </div>
+  </SECTION>
+  <section class="cards">
+    <div id="new"></div>
+    <div class="item" data-aos="fade-up">THE LATEST</div>
+    <div class="news">
+      <div class="car">
+        <div class="wrapper">
+          <img src="/assets/mews1.jpeg" class="cover-image">
+        </div>
+        <img src="/assets/mews1-removebg-preview.png" class="character">
+        <div class="caption">
+          <p2>03/27/24 .<SPAN class="red">ESPORTS</SPAN></p2>
+          <p>2024VCT AMERICAS STAGE 1 AND 2:<br>FORMAT EXPLAINER</p>
+        </div>
+      </div>
+      <div class="car">
+        <div class="wrapper">
+          <img src="/assets/mews2.jpeg" class="cover-image">
+        </div>
+        <img src="/assets/m4.png" class="character">
+        <div class="caption">
+          <p2>03/27/24 .<SPAN class="red">GAME UPDATES</SPAN></p2>
+          <p>VALORANT PATCH NOTES 8.05</p>
+        </div>
+      </div>
+      <div class="car">
+        <div class="wrapper">
+          <img src="/assets/mews3.jpeg" class="cover-image">
+        </div>
+        <img src="/assets/m3.png" class="character">
+        <div class="caption">
+          <p2>03/27/24 .<SPAN class="red">GAME UPDATES</SPAN></p2>
+          <p>CLOVE OFFICIAL GAMEPLAY REVEAL //<br> VALORANT</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="lin" data-aos="fade-up">
+      <a href="news" class="link-arrow">
+        <p2>GO TO NEWS</p2>
+        <p>&#10132;</p>
+      </a>
+    </div>
+    </div>
+  </section>
+  <section class="defi">
+    <div class="def">
+      <p>EPISODE_08 // ACT II / YR 4</p>
+      <div class="aosdef" data-aos="fade-up" data-aos-duration="2500">DEFIANCE</div>
+      <button class="call-to-action" onclick="toggleVideo();">
+        <div>
+          <div>
+            WATCH NOW
+          </div>
+        </div>
+      </button>
+      <div class="trailer">
+        <video src="/assets/videoplayback.mp4" height="400px" controls="true" autoplay="true" muted></video>
+        <img src="/assets/close.png" class="cl" onclick="toggleVideo();">
+      </div>
+  </section>
+  <section class="wav">
+    <div id="setup"></div>
+    <div class="heading" data-aos="fade-up" data-aos-duration="1500">
+      <p>WE ARE VALORANT</p>
+    </div>
+    <video autoplay muted loop id="redvideo">
+      <source src="/assets/REDLINE.mp4" type="video/mp4">
+    </video>
+    <div class="baaki">
+      <div class="con" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <p><span>DEFY THE LIMITS</span>
+          <br><br>Blend your style and experience on a<br> global, competitive stage. You have 13<br> rounds to attack
+          and defend your side<br> using sharp gunplay and tactical abilities.<br> And, with one life per-round, you'll
+          need<br> to think faster than your opponent if you<br> want to survive. Take on foes across<br> Competitive
+          and Unranked modes as well<br> as Deathmatch and Spike Rush.
+        </p>
+      </div>
+      <video autoplay muted loop id="gameplay">
+        <source src="/assets/Game.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+  <section class="parallax">
+    <div id="agents"></div>
+    <div class="agents" data-aos="fade-up" data-aos-duration="4000">
+      <h1>YOUR<br>AGENTS</h1>
+    </div>
+    <div class="im" data-aos="fade-up" data-aos-duration="3000">
+      <div class="im1" data-aos="fade-right" data-aos-duration="2500" data-aos-easing="ease-in-sine"> <img
+          src="/assets/valo2-removebg-preview.png" width="500px" height="700px"></div>
+      <div class="im2" data-aos="fade-left" data-aos-duration="2500" data-aos-easing="ease-in-sine"><img
+          src="/assets/valo3-removebg-preview.png" width="500px" height="700px"></div>
+      <div class="cont" data-aos="fade-right" data-aos-duration="1000">
+        <p>CREATIVITY IS YOUR GREATEST WEAPON</p>
+        <p2>More than guns and bullets, you’ll choose an Agent armed with adaptive, swift, and lethal abilities that
+          create opportunities to let your gunplay shine. No two Agents play alike, just as no two highlight reels will
+          look the same.</p2>
+      </div>
+  </section>
+  <section class="end">
+    <div id="maps"></div>
+    <div class="endcontent" data-aos="fade-up" data-aos-duration="1000">
+      YOUR MAPS
+    </div>
+    <div class="endcontent2">
+      <p><span>FIGHT AROUND THE WORLD</span><br>
+        Each map is a playground to showcase your creative<br> thinking. Purpose-built for team strategies,
+        spectacular<br> plays, and clutch moments. Make the play others will<br> imitate for years to come.</p>
+    </div>
+    <div class="endpng">
+      <div class="birds" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+        <img src="/assets/birds.png">
+        <img src="/assets/birds.png">
+      </div>
+      <img src="/assets/end.png">
+    </div>
+  </section>
+  <section class="footer">
+    <div class="bar">
+      <div class="nav">
+        <li>
+          <a href="#" class="bar1">DOWNLOAD GAME CLIENT</a>
+        </li>
+        <li><a href="#" class="bar2">DOWNLOAD RIOT MOBILE COMPANION APP</a>
+        </li>
+      </div>
+    </div>
+    <div class="icons">
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+    </div>
+    <div class="logologo">
+      <div class="i1"><img src="/assets/riotlogosmall-removebg-preview.png"></div>
+      <div class="i2"><img src="/assets/val-logo-small.png" class="i2"></div>
+    </div>
+    <div class="cp">
+      <center>
+        <p2>&#169; RIOT GAMES, INC. RIOT GAMES, VALORANT AND ANY ASSOCIATED LOGOS ARE TRADEMARKS,<BR>SERVICE MARKS,
+          AND/OR REGISTERED TRADEMARKS OF RIOT, INC.</p2>
+      </center>
+    </div>
+    <div class="nav2">
+      <li>
+        <a href="#" class="ba1">PRIVACY NOTICE</a>
+      </li>
+      <li><a href="#" class="ba2">TERMS OF SERVICE</a>
+      </li>
+      <li><a href="#" class="ba3">COOKIE PREFERENCES</a>
+      </li>
+    </div>
+    <div class="last">
+      <img src="/assets/blood-langages.png">
+    </div>
+  </section>
+  <script>
+    window.onload = function () {
+      document.getElementById("audi").play();
+    }
+  </script>
+  <script>
+    function toggleVideo() {
+      const trailer = document.querySelector('.trailer');
+      const video = document.querySelector('video');
+      trailer.classList.toggle('active');
+      video.currentTime = 0;
+      video.pause();
+
+    }
+  </script>
+  <script>
+    document.querySelector('.red-btn').addEventListener('click', function () {
+      // Display the modal
+      var mod = document.getElementById("myMod");
+      mod.style.display = "flex";
+    });
+
+    // Function to close the modal when clicking on the close button
+    document.querySelector('.close').addEventListener('click', function () {
+      var mod = document.getElementById("myMod");
+      mod.style.display = "none";
+    });
+
+    // Function to close the modal when clicking anywhere outside of it
+    window.addEventListener('click', function (event) {
+      var mod = document.getElementById("myMod");
+      if (event.target == mod) {
+        mod.style.display = "none";
+      }
+    });
+
+    // Function to handle going back to the home screen
+    function goToHome() {
+      window.location.href = "featured"; // Change "home" to the actual URL of your home screen
+      clearCart();
+    }
+  </script>
+
+  <script>
+    document.querySelector('.valorant-btn').addEventListener('click', function () {
+      // Display the modal
+      var modal = document.getElementById("myModal");
+      modal.style.display = "block";
+    });
+    // Function to close the modal when clicking on the close button
+    document.querySelector('.close').addEventListener('click', function () {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    });
+
+    // Function to close the modal when clicking anywhere outside of it
+    window.addEventListener('click', function (event) {
+      var modal = document.getElementById("myModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    // Function to handle going back to the home screen
+    function goToHome() {
+      window.location.href = "featured"; // Change "home" to the actual URL of your home screen
+      clearCart();
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+    integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+    integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+[
+    {
+        "_id": 1,
+        "name": "Valorant Hoodie(UNISEX)",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltdcea26e57043fb3b/5fa35a6a24612d7400da2572/IGNITION_HDI_MAIN.png",
+        "price": "$65.99"
+    },
+    {
+        "_id": 2,
+        "name": "VALORANT Agents Tee(Unisex)",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltd77217b94b11661f/5fa35b7cffb61e50a0fa98db/CHARACTERTEE_WV1_Main.png",
+        "price": "$30.00"
+    },
+    {
+        "_id": 3,
+        "name": "Valorant PRTCL Hoodie",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blte02ed61c95b18e61/5fa35ac709ed4c6f277ea279/wv1_hdi.png",
+        "price": "$65.00"
+    },
+    {
+        "_id": 4,
+        "name": "Valorant PRTCL zip-up Hoodie",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt94b7347cbeccc562/5fa35b0772a3526f28db8f0d/wv1_hdi_zip.png",
+        "price": "$70.00"
+    },
+    {
+        "_id": 5,
+        "name": "VALORANT PRTCL Tee (Unisex)",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt3dbe6bf22ad65b37/5fa35b486f82405d9a4a93b2/wv1_blacktee.png",
+        "price": "$30.00"
+    },
+    {
+        "_id": 6,
+        "name": "Spirit Blossom Ahri Traditional Top",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blte667fdf456556906/63ea813d45406c110ebcc7af/Ahri-Cardigan_Front_Shot_Thumb_1.png",
+        "price": "$94.44"
+    },
+    {
+        "_id": 7,
+        "name": "Worlds 2023 Womens Zip Fleece",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt2fc02a48fdf414fd/65136f79c9f9dc0c657bab14/Worlds_2023_Women_s_Zip_Fleece_Ecomm_Image_1.png",
+        "price": "$74.99"
+    },
+    {
+        "_id": 8,
+        "name": "Wild Rift Icons Hoodie Tan (Unisex)",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltc24f2d79d8c8e283/62a7a34443918857196ed8fc/2022_Promo_WR-Icons_Ecomm_Hoodie_image01.png",
+        "price": "$80.00"
+    },
+    {
+        "_id": 9,
+        "name": "Worlds 2023 Varsity Jacket",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltf2059a91f69bdca3/65137c07b258107a5b80404b/Worlds2023_VarsityJacket_EComm_1.png",
+        "price": "$179.99"
+    },
+    {
+        "_id": 10,
+        "name": "Poro Holiday Sweater",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt0a2fc386f843aeab/6567ad16efd9ef5d43b82ffe/Holiday-2023_Poro-Sweater_Ecomm-Image_1.png",
+        "price": "$70.00"
+    },
+    {
+        "_id": 11,
+        "name": "VALORANT Phoenix Duelist Crewneck (Unisex)",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt38261a66478aaeaf/6042b3583c41f30bce483247/PHNX_CREWNECK_WV2_MAIN.png",
+        "price": "$60.00"
+    },
+    {
+        "_id": 12,
+        "name": "MSI 2023 ALL ODDS Tee",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt2c5a685eead11199/644199a910882b4f2385bcde/MSI2023_AllOdds-Tee_Back_Shot_1.png",
+        "price": "$33.99"
+    },
+    {
+        "_id": 13,
+        "name": "VALORANT Masters Madrid 24 // Initiated Tee",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt8886fe736e9e426e/65e770e07ca2201d9b1e4b78/VALORANT_VCT_Evergreen_Masters_Short_Sleeve_Tee_(Unisex)_Ecomm_Image_1.png",
+        "price": "$34.99"
+    },
+    {
+        "_id": 14,
+        "name": "Worlds 2023 Baseball Jersey",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt90673ed7590bcb57/65137ba28f0457bd5912a6b5/Worlds2023_BaseballJersey_EComm_1.png",
+        "price": "$75.00"
+    },
+    {
+        "_id": 15,
+        "name": "VALORANT Masters Madrid 24 // Killjoy Longsleeve",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt0f05bd8b65b05263/65e7712b03e46036c1dc2688/VALORANT_VCT_Evergreen_Masters_Long_Sleeve_Tee_(Unisex)_Ecomm_Image_2.png",
+        "price": "$34.99"
+    },
+    {
+        "_id": 16,
+        "name": "Master Chef Tahm Kench Tee",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt29f71abe7c882413/6308e6e12d08277c7e7326d6/2022_Promo_TK-Tee_Ecomm_image02.png",
+        "price": "$30.99"
+    },
+    {
+        "_id": 17,
+        "name": "Sentinel of Light Lucian Tee",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltde099c34525db242/6308e7671ee78a063c596bd3/2022_Promo_Luc-Tee_Ecomm_image02.png",
+        "price": "$30.00"
+    },
+    {
+        "_id": 18,
+        "name": "Worlds 2023 Jogger",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt333e18667f6304e1/65137a734d72e9c23584bfbb/Worlds2023_Jogger_EComm_1.png",
+        "price": "$64.99"
+    },
+    {
+        "_id": 19,
+        "name": "VALORANT Shatterprint Joggers",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt676c34e8f2645a92/61ef2ea9ac70415152965d6a/2022_ValW3_Ecomm_Joggers_image_01.png",
+        "price": "$75.00"
+    },
+    {
+        "_id": 20,
+        "name": "Valorant Baseball Shorts",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt57f9d236c9592676/62b23f7d1da22658512987e4/2022_Promo_VAL-WV3-5_Ecomm_Shorts_image01.png",
+        "price": "$50.00"
+    },
+    {
+        "_id": 21,
+        "name": "RockLove Kindred Necklace",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt93e6fec88dd25244/63c5ada6f94e7103894af182/Kindred-Necklace_Front_Shot_1.png",
+        "price": "$149.00"
+    },
+    {
+        "_id": 22,
+        "name": "RockLove HEARTSTEEL Earrings",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt8a45df881b9222ec/652ec14b8fc81365fe6c2e5d/Rocklove_PBJ_Earrings_Ecomm_Image_1.png",
+        "price": "$18.00"
+    },
+    {
+        "_id": 23,
+        "name": "RockLove HEARTSTEEL Necklace",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt65d0ae7cc5cdec2d/652ec18e701ffeec9739d060/Rocklove_PBJ_Necklace_Ecomm_Image_1.png",
+        "price": "$84.99"
+    },
+    {
+        "_id": 24,
+        "name": "RockLove Arcane Ekko Stopwatch Necklace",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blte310f2cd9a24c654/636c3268f788e078de0a697b/ekko-stopwatch-front-shot-1.png",
+        "price": "$100.00"
+    },
+    {
+        "_id": 25,
+        "name": "RockLove Spirit Blossom Lillia Lantern Earrings",
+        "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt425d581e25b0c6d2/6337673b1434a77dfebf6ad4/2022_Promo_SB_LiliaEarrings_Ecomm_thumb-image01.png",
+        "price": "$79.00"
+    },
+    {
+        "_id": 26,
+        "name": "Little Legends Abyssia Mugs",
+        "image": "https://rgmerch-a.akamaihd.net/vendors/pf/production/1800-18-B-ThuMay072020-0.jpg",
+        "price": "$18.00"
+    },
+    {
+        "_id": 27,
+        "name": "Little Legends Hushtail Mugs",
+        "image": "https://rgmerch-a.akamaihd.net/vendors/pf/production/1800-07-B-FriMar062020-0.jpg",
+        "price": "$18.00"
+    },
+    {
+        "_id": 28,
+        "name": "",
+        "image": "https://rgmerch-a.akamaihd.net/vendors/pf/production/1800-12-B-FriMar062020-0.jpg",
+        "price": "$18.00"
+    },
+    {
+        "_id": 29,
+        "name": "Little Legends Dango Mugs",
+        "image": "https://rgmerch-a.akamaihd.net/vendors/pf/production/1800-08-B-FriMar062020-0.jpg",
+        "price": "$18.00"
+    },
+    {
+        "_id": 30,
+        "name": "Little Legends Fuwa Mugs",
+        "image": "https://rgmerch-a.akamaihd.net/vendors/pf/production/1800-11-B-FriMar062020-0.jpg",
+        "price": "$18.00"
+    },
+        {
+            "_id": 31,
+            "name": "Little Legends Shisa Mugs",
+            "image": "https://rgmerch-a.akamaihd.net/vendors/pf/production/1800-10-B-FriMar062020-0.jpg",
+            "price": "$18.00"
+        },
+        {
+            "_id": 32,
+            "name": "Champions 2022 \"FEAR/NONE\" Dad Hat",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltc4c304fec10561f8/62fe695bb4be734daff7fe3a/2022_Promo_VCT-Champs_Ecomm_Hat_thumbnail_image01.png",
+            "price": "$30.99"
+        },
+        {
+            "_id": 33,
+            "name": "MSI 2023 DEFY Hat",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt843de563e303cb53/6441965e46640e0796ad25ba/MSI2023_Defy-Hat_Front_Shot_1.png",
+            "price": "$29.99"
+        },
+        {
+            "_id": 34,
+            "name": "HEARSTEEL Sett Beanie",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt281e57c2fead98c3/65429bd2c2b34d001be74632/Ecomm-Image-ecomm_image_01.png",
+            "price": "$29.99"
+        },
+        {
+            "_id": 35,
+            "name": "VALORANT Champions 2023 One More Hat",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt1c50c3c1451d7473/64c2e31ae930604a587f0ec4/Ecomm-Image-Promo-One_More_Hat_ecomm_image_01.png",
+            "price": "$29.99"
+        },
+        {
+            "_id": 36,
+            "name": "Ahri Travelers Hood",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltc1905ab8b0fe5a20/65136b4ca9968b2b0536a452/Worlds_2023_Ahri_Hood_Ecomm_Image_1.png",
+            "price": "$54.99"
+        },
+        {
+            "_id": 37,
+            "name": "MSI 2023 DEFY Beanie",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltdb602a2848dad07d/644195f45515507b911c6dd3/MSI2023_Beanie_Front_Shot_1.png",
+            "price": "$29.99"
+        },
+        {
+            "_id": 38,
+            "name": "VALORANT Logo Snapback Hat",
+            "image": "./app/assets/cap.png",
+            "price": "$30.00"
+        },
+        {
+            "_id": 39,
+            "name": "VALORANT Reyna Statue",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt67b4f1720db5a8e0/64c2df94385f4624869ecb12/Ecomm-Image-Promo-Reyna_Statue_ecomm_image_01.png",
+            "price": "$184.99"
+        },
+        {
+            "_id": 40,
+            "name": "VALORANT Phoenix Statue",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt5d46ce7c4eac7ff3/6229324bf26a4b66ea4a0c6f/2022_Promos_Phoenix-Statue_Ecomm_image_1.png",
+            "price": "$184.99"
+        },
+        {
+            "_id": 41,
+            "name": "VALORANT Killjoy Statue",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt20e1a31afe56e952/64c2e1fb61d28702728562a0/Ecomm-Image-Promo_KillJoy_ecomm_image_01.png",
+            "price": "$179.99"
+        },
+        {
+            "_id": 42,
+            "name": "VALORANT Jett Statue",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt5d13d9fb3120d132/62293290ba7f6b684a46badb/2022_Promos_Jett-Statue_Ecomm_image_1.png",
+            "price": "$179.99"
+        },
+        {
+            "_id": 43,
+            "name": "Heartseeker Yuumi Figure",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt1d199e498eff7fe2/63e17ace4488ff110caea0cf/Heartseeker-Yuumi_Figure_Front_Shot_Thumb_1.png",
+            "price": "$34.99"
+        },
+        {
+            "_id": 44,
+            "name": "Heartseeker Yuumi Ruby Chroma Figure",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt593a7eb668bcdbf0/65b1aaebebfd037e3d3cfc44/Heartseeker_Yuumi_Ruby_Chroma_Ecomm_Image_1.png",
+            "price": "$34.99"
+        },
+        {
+            "_id": 45,
+            "name": "Porcelain Lux Figure",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blteba59804c9cdc29a/65c4089cab9c0f3036b93f66/Porcelain_Lux_Figure_Ecomm_Image_1.png",
+            "price": "$34.99"
+        },
+        {
+            "_id": 46,
+            "name": "Beast Kingdom Star Guardian Kai'Sa Action Figure",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltf2440521587fa2a0/64c2e2ca5133eea614bf01a4/Ecomm-Image-Promo_pin-ecomm_image_01.png",
+            "price": "$89.99"
+        },
+        {
+            "_id": 47,
+            "name": "Yone Figure",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt7d0b884b900d24fb/64d2b20cb32218d1f5660fc2/Yone_Figure_Ecomm_Image_1.png",
+            "price": "$34.99"
+        },
+        {
+            "_id": 48,
+            "name": "Heartseeker Yuumi Pearl Chroma Figure",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltaa3721b57ba1eaf9/65b1aac2292a0e724187bf53/Heartseeker_Yuumi_Pearl_Chroma_Ecomm_Image_1.png",
+            "price": "$34.99"
+        },
+        {
+            "_id": 49,
+            "name": "VALORANT Champions 2023 MoshPin",
+            "image": "https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltf2440521587fa2a0/64c2e2ca5133eea614bf01a4/Ecomm-Image-Promo_pin-ecomm_image_01.png",
+            "price": "$34.99"
+        }
+    ]
+    

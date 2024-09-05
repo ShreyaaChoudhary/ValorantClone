@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/chatstyle2.css">
+  <title>VALORANT</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.jpg">
+</head>
+<body>
+  <header>
+            
+    <a href="#" class="logo"><img src="/assets/chatriot.png" width="300px" height="140px"></a>
+    <a href="#" class="logo2"><img src="/assets/chatvalo-removebg-preview.png" width="50px"></a>
+    
+    <u1 class="navigation">
+        <li> <li>
+          <a href="index">GameInfo&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+          <ul class="dropdown">    
+              <li><a href="#new">news</a></li>
+              <li><a href="#agents">agents</a></li>
+              <li><a href="#maps">maps</a></li>
+              <li><a href="#setup">setup</a></li>
+          </ul>
+      </li></li>
+        <li><a href="media">media</a></li>
+        <li><a href="leaderboard">leaderboard</a></li>
+        <li><a href="news">news</a></li>
+            <li><a href="#">OurSocials&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+            <ul class="dropdown">    
+                <li><a href="https://www.instagram.com/valorant/?hl=en">&nbsp;instagram</a></li>
+                <li><a href="https://discord.com/invite/valorant">&nbsp;discord</a></li>
+                <li><a href="https://www.youtube.com/@valorant">&nbsp;youtube</a></li>
+            </ul></li>
+        <li><a href="featured">merch</a></li>
+        <li><a href="indexchat">connect</a></li>
+        <li>
+          <a href="#">LOGIN/SIGNUP</a></li>
+          </u1>
+        </header>
+  <section>
+    <div class="bg-image"></div>
+    <div class="video">
+      <img src="/assets/fanart.gif" width="1100px" height="700px">
+  </div>
+  <div class="chat-container">
+    <header class="chat-header">
+      <h1>VALORANT CONNECT</h1>
+      <a href="indexchat" class="btn">&#10060;</a>
+    </header>
+    <main class="chat-main">
+      <div class="chat-sidebar">
+        <h3><i class="fas fa-comments"></i> Server:</h3>
+        <h2 id="room-name"></h2>
+        <h3><i class="fas fa-users"></i> Users</h3>
+        <ul id="users">
+
+        </ul>
+      </div>
+      <div class="chat-messages"></div>
+    </main>
+    <div class="chat-form-container">
+      <form id="chat-form">
+        <input
+          id="msg"
+          type="text"
+          placeholder="Enter Message"
+          required
+          autocomplete="off"
+        />
+        <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+      </form>
+    </div>
+  </div>
+</section>
+  <!--querys string library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.12.0/qs.min.js" integrity="sha512-7guIquo9is/MQs1wfLZyVViTlsvrIoHdnSzoFmPvPMDpqjL2fvDqcVKpaZ9PS3Sbf6DLBRUUZ5X3jcQ/wotWow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/chatapp.js"></script>
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

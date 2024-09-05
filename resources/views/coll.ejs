@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.jpg">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/STYLE5.CSS">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+</head>
+<style>
+    /* Modal */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #1e1d1d;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #141414;
+        width: 20%;
+        /* Could be more or less, depending on screen size */
+        border-radius: 24px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: modalopen;
+        /* Animation to open the modal */
+        animation-duration: 0.4s;
+        height: 130PX;
+    }
+
+    /* Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Modal Content Animation */
+    @keyframes modalopen {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* Button */
+    #goToCart {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        border-radius: 24PX;
+        color: white;
+        padding: 6px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    #modalMessage {
+        COLOR: WHITE;
+        margin-top: 6%;
+        font-size: 19PX;
+        font-family: FREIGHT BIG PRO;
+    }
+
+    #goToCart:hover {
+        background-color: RED;
+        /* Darker green */
+    }
+</style>
+
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage">Product added to cart!</p>
+            <button id="goToCart" onclick="goToCart()" type="button">GO TO CART</button>
+        </div>
+    </div>
+    <header>
+
+        <a href="#" class="logo"><img src="/assets/riotlogo.png" width="300px" height="120px"></a>
+        <a href="#" class="logo2"><img src="/assets/valolog.png" width="50px"></a>
+
+        <u1 class="navigation">
+            <li>
+                <a href="featured">featured</a>
+            </li>
+            <li>
+            <li>
+                <a href="apparel">apparel&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="apparel"><span>SHOP ALL</span></a></li>
+                    <li><a href="apparel#top">top</a></li>
+                    <li><a href="apparel#bottom">bottoms</a></li>
+                    <li><a href="apparel#hoo">Hoodie&jackets</a></li>
+                </ul>
+            </li>
+            </li>
+            <li>
+            <li>
+                <a class="active" href="coll">collectibles&nbsp;<i class="fa fa-caret-down"
+                        style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="coll"><span>SHOP ALL</span></a></li>
+                    <li><a href="#fig">Figures</a></li>
+                    <li><a href="#sta">statue</a></li>
+                    <li><a href="#pin">pin</a></li>
+                </ul>
+            </li>
+            </li>
+            <li>
+            <li>
+                <a href="art">art&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="art#no"><span>SHOP ALL</span></a></li>
+                    <li><a href="art#no">-</a></li>
+                    <li><a href="art#no">-</a></li>
+                    <li><a href="art#no">-</a></li>
+                </ul>
+            </li>
+            </li>
+            <li>
+            <li>
+                <a href="acc">accesories&nbsp;<i class="fa fa-caret-down" style="color:rgb(168, 163, 163)"></i></a>
+                <ul class="dropdown">
+                    <li><a href="acc"><span>SHOP ALL</span></a></li>
+                    <li><a href="acc#jew">jewellery</a></li>
+                    <li><a href="acc#hat">hats & beanies</a></li>
+                    <li><a href="acc#mug">Mugs</a></li>
+                </ul>
+            </li>
+            </li>
+            <li><a href="sale">Sales</a></li>
+            <li><a href="cart" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+        </u1>
+        <div class="search">
+            <input type="text" class="search__input" placeholder="Search">
+            <button class="search__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+    <section class="aa">
+        <p><a href="merch">Home&nbsp;</a><span>/</span>&nbsp;Collectibles</p>
+    </section>
+    <section class="bg">
+        <div class="data">
+            <p>Collectibles</p>
+        </div>
+        <div class="jee"><img src="/assets/white.png" alt=""></div>
+    </section>
+    <section class="page1">
+    </section>
+    <section class="page2">
+        <div class="maincont">
+            <div class="mainrow">
+                <div class="maincol">
+                    <div class="subcol">
+                        <p>CATEGORY</p>
+                        <div class="subrow">
+                            <a href="#fig">figures</a>
+                            <a href="#sta">statues</a>
+                            <a href="#pin">pins</a>
+                            <a href="#no">plush</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="maincol">
+                    <div class="cont">
+                        <div class="row" id="sta" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 38; i < 39; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+                                <div class="product-card">
+                                    <div class="badge1">special edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt67b4f1720db5a8e0/64c2df94385f4624869ecb12/Ecomm-Image-Promo-Reyna_Statue_ecomm_image_01.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">statues</span>
+                                        <h4><a href="">VALORANT Reyna Statue</a></h4>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$184.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <p>No items found</p>
+                            <% } %>
+                            <div class="col">
+                                <% if (items && items.length > 0) { %>
+                                    <% for (let i = 39; i < 40; i++) { %>
+                                        <% const item = items[i]; %>
+                                <div class="product-card">
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt5d46ce7c4eac7ff3/6229324bf26a4b66ea4a0c6f/2022_Promos_Phoenix-Statue_Ecomm_image_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">statues</span>
+                                        <h4><a href="">VALORANT Phoenix Statue</a></h4>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price"><small>$99.00</small>$184.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <p>No items found</p>
+                                <% } %>
+
+                                <% if (items && items.length > 0) { %>
+                                    <% for (let i = 41; i < 42; i++) { %>
+                                        <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt20e1a31afe56e952/64c2e1fb61d28702728562a0/Ecomm-Image-Promo_KillJoy_ecomm_image_01.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">statues</span>
+                                        <h4><a href="">VALORANT Killjoy Statue</a></h4>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price"><small>$80.00</small>$179.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <% } %>
+                        <% } else { %>
+                            <p>No items found</p>
+                            <% } %>
+
+                        <div class="row" id="sta" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 42; i < 43; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt5d13d9fb3120d132/62293290ba7f6b684a46badb/2022_Promos_Jett-Statue_Ecomm_image_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">statues</span>
+                                        <h4><a href="">VALORANT Jett Statue</a></h4>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$179.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <% } %>
+                        <% } else { %>
+                            <p>No items found</p>
+
+                            <% } %>
+                            <!-- Handle case where items array is empty or undefined -->
+                        <div class="row" id="fig" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 43; i < 44; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge1">special edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt1d199e498eff7fe2/63e17ace4488ff110caea0cf/Heartseeker-Yuumi_Figure_Front_Shot_Thumb_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Figures</span>
+                                        <h4><a href="">Heartseeker Yuumi Figure</a></h4>
+                                        <p style="color:grey">This product is a collector's item intended for ages 14+
+                                        </p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$34.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <p>No items found</p>
+    
+                                <% } %>
+                                <% if (items && items.length > 0) { %>
+                                    <% for (let i = 44; i < 45; i++) { %>
+                                        <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge1">special edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt593a7eb668bcdbf0/65b1aaebebfd037e3d3cfc44/Heartseeker_Yuumi_Ruby_Chroma_Ecomm_Image_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Figures</span>
+                                        <h4><a href="">Heartseeker Yuumi Ruby Chroma Figure</a></h4>
+                                        <p style="color:grey">This product is a collector's item intended for ages 14+
+                                        </p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$34.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <p>No items found</p>
+    
+                                <% } %>
+                                <% if (items && items.length > 0) { %>
+                                    <% for (let i = 45; i < 46; i++) { %>
+                                        <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge1">special edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blteba59804c9cdc29a/65c4089cab9c0f3036b93f66/Porcelain_Lux_Figure_Ecomm_Image_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Figures</span>
+                                        <h4><a href="">Porcelain Lux Figure</a></h4>
+                                        <p style="color:grey">This product is a collector's item intended for ages 14+
+                                        </p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$34.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                        <% } else { %>
+                            <p>No items found</p>
+
+                            <% } %>
+                        <div class="row" id="fig" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 46; i < 47; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">limited edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt134e9f8e7a3f1231/6410e5ffb70b5c1064dd4dfd/2023_SG_Ecomm_BK-Kaisa_Front_Shot_Thumb_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Figures</span>
+                                        <h4><a href="">Beast Kingdom Star Guardian Kai'Sa Action Figure</a></h4>
+                                        <p style="color:red"><b>Estimated ship date: Apr 30, 2024</b></p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$89.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <p>No items found</p>
+    
+                                <% } %>
+                                <% if (items && items.length > 0) { %>
+                                    <% for (let i = 47; i < 48; i++) { %>
+                                        <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blt7d0b884b900d24fb/64d2b20cb32218d1f5660fc2/Yone_Figure_Ecomm_Image_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Figures</span>
+                                        <h4><a href="">Yone Figure<span style="color:red;font-size: 14px;">(+FREE ADD
+                                                    ON)</span></a></h4>
+                                        <p style="color:grey">This product is a collector's item intended for ages 14+
+                                        </p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$34.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                            <% } else { %>
+                                <p>No items found</p>
+    
+                                <% } %>
+                                <% if (items && items.length > 0) { %>
+                                    <% for (let i = 48; i < 49; i++) { %>
+                                        <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge1">special edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltaa3721b57ba1eaf9/65b1aac2292a0e724187bf53/Heartseeker_Yuumi_Pearl_Chroma_Ecomm_Image_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Figures</span>
+                                        <h4><a href="">Heartseeker Yuumi Pearl Chroma Figure</a></h4>
+                                        <p style="color:grey">This product is a collector's item intended for ages 14+
+                                        </p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$34.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <% } %>
+                        <% } else { %>
+                            <p>No items found</p>
+
+                            <% } %>
+                        <div class="row" id="pin" data-aos="fade-up" data-aos-duration="1000">
+                            <% if (items && items.length > 0) { %>
+                                <% for (let i = 42; i < 43; i++) { %>
+                                    <% const item = items[i]; %>
+                            <div class="col">
+
+                                <div class="product-card">
+                                    <div class="badge">limited edition</div>
+                                    <div class="product-tumb">
+                                        <img src="https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltf2440521587fa2a0/64c2e2ca5133eea614bf01a4/Ecomm-Image-Promo_pin-ecomm_image_01.png"
+                                            alt="">
+                                    </div>
+                                    <div class="product-details">
+                                        <span class="product-catagory">Pins</span>
+                                        <h4><a href="">VALORANT Champions 2023 MoshPin</a></h4>
+                                        <p style="color:rgb(141, 137, 137);">Add championship flair to your outfit with
+                                            our VALORANT Champions 2023 MoshPin, a stylish collectible for any fan.</p>
+                                        <div class="product-bottom-details">
+                                            <div class="product-price">$34.99</div>
+                                            <div class="product-links">
+                                                <form action="/update-cart" method="POST">
+                                                    <input type="hidden" name="_id" value="<%= item._id %>">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="price" value="<%= item.price %>">
+                                                    <!-- Other item details as needed -->
+                                                    <button type="submit" class="cart-button"><i class="fa fa-shopping-bag"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                        <% } else { %>
+                            <p>No items found</p>
+
+                            <% } %>
+                        </div>
+                        <div class="row" id="no" data-aos="fade-up" data-aos-duration="2000">
+                            <p>NO MORE TO LOAD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="footer">
+        <div class="bar">
+            <div class="nav">
+                <li>
+                    <a href="#" class="bar1">DOWNLOAD GAME CLIENT</a>
+                </li>
+                <li><a href="#" class="bar2">DOWNLOAD RIOT MOBILE COMPANION APP</a>
+                </li>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </div>
+        <div class="logologo">
+            <div class="i1"><img src="/assets/riotlogosmall-removebg-preview.png"></div>
+            <div class="i2"><img src="/assets/val-logo-small.png" class="i2"></div>
+        </div>
+        <div class="cp">
+            <center>
+                <p2>&#169; RIOT GAMES, INC. RIOT GAMES, VALORANT AND ANY ASSOCIATED LOGOS ARE TRADEMARKS,<BR>SERVICE
+                    MARKS,
+                    AND/OR REGISTERED TRADEMARKS OF RIOT, INC.</p2>
+            </center>
+        </div>
+        <div class="nav2">
+            <li>
+                <a href="#" class="ba1">PRIVACY NOTICE</a>
+            </li>
+            <li><a href="#" class="ba2">TERMS OF SERVICE</a>
+            </li>
+            <li><a href="#" class="ba3">COOKIE PREFERENCES</a>
+            </li>
+        </div>
+        <div class="last">
+            <img src="/assets/blood-langages.png">
+        </div>
+    </section>
+    <script>
+        AOS.init({
+            duration: 1700,
+        })
+
+    </script>
+    <script src="/cartjs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+        integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
